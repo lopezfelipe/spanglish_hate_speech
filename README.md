@@ -1,2 +1,10 @@
-# spanglish_hate_speech
-TDI challenge: Use machine learning to detect hate speech in Spanglish
+# Automatic detection of hate speech in Spanglish
+
+There has been a large increase in racist and xenophobic messages on the Internet in the last few years. While Facebook and Twitter have developed solutions to detect and flag hate speech automatically using machine learning, similar solutions are lacking in other websites that are frequented by immigrant communities, which include YouTube channels, news websites, and online stores. Such websites are sometimes visited by internet trolls, persons that post offensive, inflammatory comments with the intent of disrupting normal, on-topic discussions. Such comments often generate several emotional responses, which end up promoting the troll’s comment to the top of the list. It is in the best interest of websites to rapidly detect hate speech and filter out offensive comments left by trolls, especially for sites that are frequented by immigrant communities. Effective monitoring is no trivial task, however, as comments may be written in several languages or in a combination of them (e.g., Spanglish).
+
+The solution I propose is a filter that will rely on machine learning to identify hate speech in English, Spanish, and Spanglish, and flag those messages for demotion in the comment section.
+
+In my project, I decided to start with data that is readily available on the Internet. I downloaded a corpus of hate speech in English provided by Wikipedia, in which human raters labeled messages as belonging to various kinds of hate speech. I cleaned the dataset, identified the most common n-grams in hate speech messages, and used this information to train a Naïve Bayes classifier which returned an accuracy of 95% in detecting hate speech on a test data set.
+
+The next stages of the project will involve using web scraping from YouTube, Univision, United We Dream, and other websites often targeted by xenophobes and internet trolls. Messages in English, Spanish, and Spanglish will be labeled manually and then used to train an extended version of the hate-speech detector. A demonstration of final product will be deployed in the form of a web app that will detect hate speech and flag those messages.
+
